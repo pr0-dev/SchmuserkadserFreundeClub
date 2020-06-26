@@ -1,0 +1,26 @@
+{
+  "name": "pr0-sfc",
+  "version": "0.1.0",
+  "description": "Schmuserkadser Freunde Club",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "lint": "eslint ./src",
+    "dev": "npm run lint && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr0-dev/SchmuserkadserFreundeClub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pr0-dev/SchmuserkadserFreundeClub/issues"
+  },
+  "homepage": "http://schmuser.club",
+  "author": "TheShad0w",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
+  }
+}
