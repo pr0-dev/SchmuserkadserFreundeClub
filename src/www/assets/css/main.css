@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* =========================== */
+/* = Copyright (c) TheShad0w = */
+/* =========================== */
+
+/* Root */
+
+html, 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #cfd2da;
+    text-align: left;
+    background-color: #252830;
+}
+
+/* Header */
+
+header.sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 140px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #30343e;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+header.sidebar > a.top-item {
+    display: block;
+    position: relative;
+    height: 115px;
+    width: 140px;
+    text-indent: -9999px;
+    font-size: 18px;
+    line-height: 1;
+    border-bottom: 0;
+    background: #5a6073 url("../img/schmus.png") center center no-repeat;
+    background-size: contain;
+}
+
+header.sidebar > .sidebar-content {
+    display: block;
+}
+
+header.sidebar > .sidebar-content > ul.sidebar-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+header.sidebar > .sidebar-content > ul.sidebar-elements > li.nav-item {
+    float: none;
+    display: block;
+}
+
+header.sidebar > .sidebar-content > ul.sidebar-elements > li.nav-item > a.nav-link {
+    border-top: 1px solid #252830;
+    border-left: 1px solid #252830;
+    border-right: 0;
+    height: 115px;
+    width: 140px;
+    position: relative;
+    font-size: 18px;
+    color: inherit;
+    text-align: center;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+header.sidebar > .sidebar-content > ul.sidebar-elements > li.nav-item > a.nav-link p {
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+    width: 100%;
+}
+
+header.sidebar > .sidebar-content > ul.sidebar-elements > li.nav-item:last-child > a.nav-link {
+    background: #5a6073;
+}
+
+/* Body */
+
+section.main {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 140px;
+    width: 100%;
+}
+
+section.main > .img-wrapper {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+section.main > .img-wrapper > img {
+    height: 600px;
+    width: auto;
+}
+
+section.main > .img-wrapper > input {
+    position: absolute;
+    border: 1px solid #000;
+    background: #FFF;
+    padding-left: 10px;
+    outline: none;
+    height: 35px;
+    font-size: 24px;
+}
+
+section.main > .img-wrapper > #pr0-name {
+    top: 234px;
+    left: 58px;
+    width: 370px;
+}
+
+section.main > .img-wrapper > #schmuser-name {
+    top: 458px;
+    left: 604px;
+    width: 290px;
+    text-align: center;
+}
+
+section.main > .img-wrapper > #schmuser-bd-tag {
+    width: 45px;
+    left: 58px;
+    top: 334px;
+}
+
+section.main > .img-wrapper > #schmuser-bd-monat {
+    width: 45px;
+    left: 135px;
+    top: 334px;
+}
+
+section.main > .img-wrapper > #schmuser-bd-jahr {
+    width: 75px;
+    left: 212px;
+    top: 334px;
+}
+
+span.dot-1,
+span.dot-2 {
+    position: absolute;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    top: 325px;
+}
+
+span.dot-1 {
+    left: 120px;
+}
+
+span.dot-2 {
+    left: 197px;
+}
+
+section.main > .img-wrapper > a#schmuser-bild {
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 270px;
+    color: #028fd8;
+    font-size: 23px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 69px;
+    left: 617px;
+    border-radius: 100%;
+}
+
+section.main > .canvas-popup-outer {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgb(12 12 12 / 50%);
+}
+
+section.main > .canvas-popup-outer:not(.open) {
+    display: none;
+}
+
+section.main > .canvas-popup-outer.open {
+    display: block;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner {
+    height: 93vh;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border-radius: 20px;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > p {    
+    font-size: 26px;
+    color: #dbdbdb;
+    margin: 0 0 20px 0;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > canvas#res {
+    height: 79vh;
+    width: auto;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons a.confirm-btn {
+    display: flex;
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons a.confirm-btn.download-btn {
+    background: #53ff5b; 
+    margin-right: 20px;
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons a.confirm-btn.download-btn:hover {
+    background: #82ff88; 
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons a.confirm-btn.abort-btn {
+    background: #ff5353;    
+}
+
+section.main > .canvas-popup-outer > .canvas-popup-inner > .buttons a.confirm-btn.abort-btn:hover {
+    background: #ff8282; 
+}
+
+section.main > .error-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    text-align: center;
+}
+
+section.main > .error-inner .glitch {
+    position: relative;
+}
+
+section.main > .error-inner .glitch:before, 
+section.main > .error-inner .glitch:after {
+    display: block;
+    content: '404';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+}
+
+section.main > .error-inner .glitch:before {
+    color: #0ff;
+    z-index: -1;
+    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+section.main > .error-inner .glitch:after {
+    color: #f0f;
+    z-index: -2;
+    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+/* Animations */
+
+@keyframes glitch {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    20% {
+        -webkit-transform: translate(-5px,5px);
+        transform: translate(-5px,5px)
+    }
+
+    40% {
+        -webkit-transform: translate(-5px,-5px);
+        transform: translate(-5px,-5px)
+    }
+
+    60% {
+        -webkit-transform: translate(5px,5px);
+        transform: translate(5px,5px)
+    }
+
+    80% {
+        -webkit-transform: translate(5px,-5px);
+        transform: translate(5px,-5px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
