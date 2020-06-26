@@ -1,0 +1,31 @@
+<%- include("../layouts/header"); -%>
+
+<section class="main">
+    <div class="img-wrapper">
+        <img src="/img/sfc_ausweis_template_new.png" alt="SFC Ausweis Neu">
+
+        <input type="text" name="pr0gramm Name" tabindex="1" id="pr0-name">
+        <input type="text" name="Schmuser Name" tabindex="5" id="schmuser-name">
+
+        <input type="number" name="Schmuser Geburtstag" min="1" max="31" tabindex="2" id="schmuser-bd-tag">
+        <span class="dot-1">.</span>
+        <input type="number" name="Schmuser Monat" min="1" max="12" tabindex="3" id="schmuser-bd-monat">
+        <span class="dot-2">.</span>
+        <input type="number" name="Schmuser Jahr" min="1900" max="3000" tabindex="4" id="schmuser-bd-jahr">
+
+        <a href="#" tabindex="6" id="schmuser-bild">Bild auswählen</a>
+    </div>
+
+    <div class="canvas-popup-outer">
+        <div class="canvas-popup-inner">
+            <p>Vorschau: </p>
+            <canvas width="1476" height="932" id="res"></canvas>
+            <div class="buttons">
+                <a href="#" class="confirm-btn download-btn">Runterladen</a>
+                <a href="#" class="confirm-btn abort-btn">Abbrechen</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include("../layouts/footer"); -%>
