@@ -22,7 +22,6 @@ let meta = require("./utils/meta");
 
 // Services
 let portHandler = require("./services/portCheck");
-let getRoutes = require("./services/getRoutes");
 
 let version = conf.getVersion();
 let appname = conf.getName();
@@ -61,7 +60,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname, "www", "assets", "favicon.png")));
 
 app.use((req, res, next) => {
-    log.info("User Accessed: " + req.url);
     if (/\.min\.(css|js)$/.test(req.url)){
         // @ts-ignore
         res.minifyOptions = res.minifyOptions || {};
